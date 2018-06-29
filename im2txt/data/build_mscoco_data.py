@@ -1,3 +1,4 @@
+#-*-coding:UTF-8-*-
 # Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,11 +95,16 @@ import sys
 import threading
 
 
-
+import nltk
+nltk.download('punkt')
 import nltk.tokenize
 import numpy as np
 from six.moves import xrange
 import tensorflow as tf
+
+"""
+python build_mscoco_data.py --train_image_dir=/home/pubsrv/data/mscoco/raw-data/train2014/ --val_image_dir=/home/pubsrv/data/mscoco/raw-data/val2014/ --train_captions_file=/home/pubsrv/data/mscoco/raw-data/annotations/captions_train2014.json --val_captions_file=/home/pubsrv/data/mscoco/raw-data/annotations/captions_val2014.json --output_dir=/home/pubsrv/data/mscoco/output --word_counts_output_file=/home/pubsrv/data/mscoco/output/word_counts.txt
+"""
 
 tf.flags.DEFINE_string("train_image_dir", "/tmp/train2014/",
                        "Training image directory.")
