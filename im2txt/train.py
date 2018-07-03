@@ -21,7 +21,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 import sys
-sys.path.append('~/Desktop/Stanford/CS224n/MemeProject')
+sys.path.append('~/MemeProject') 
 sys.path.append('ops')
 import time
 

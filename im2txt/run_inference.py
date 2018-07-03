@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-r"""Generate captions for images using default beam search parameters."""
+"""Generate captions for images using default beam search parameters."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -29,7 +29,7 @@ import tensorflow as tf
 import configuration
 import inference_wrapper
 import sys
-sys.path.insert(0, '/data/alpv95/MemeProject/im2txt/inference_utils')
+sys.path.insert(0, '~/MemeProject/im2txt/inference_utils')
 import caption_generator
 import vocabulary
 
@@ -141,6 +141,8 @@ def main(_):
         # Ignore begin and end words.
         sentence = [vocab.id_to_word(w) for w in caption.sentence[1:-1]]
         sentence = " ".join(sentence)
+#             for w in caption.sentence[1:-1]:
+                
         print("  %d) %s (p=%f)" % (i, sentence, math.exp(caption.logprob)))
 
 

@@ -22,7 +22,8 @@ from __future__ import print_function
 
 import show_and_tell_model
 import sys
-sys.path.insert(0, '/data/alpv95/MemeProject/im2txt/inference_utils')
+sys.path.insert(0, '/home/dluser/MemeProject/im2txt/inference_utils')
+print(sys.path)
 import inference_wrapper_base
 
 
